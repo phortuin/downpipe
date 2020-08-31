@@ -1,6 +1,6 @@
 {
-  "name": "downpipe",
-  "version": "0.1.0",
+  "name": "@phortuin/downpipe",
+  "version": "0.1.1",
   "description": "ERPAM",
   "license": "MIT",
   "homepage": "https://github.com/phortuin/downpipe",
