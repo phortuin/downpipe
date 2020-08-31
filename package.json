@@ -1,7 +1,7 @@
 {
   "name": "@phortuin/downpipe",
-  "version": "0.1.1",
-  "description": "ERPAM",
+  "version": "0.1.2",
+  "description": "Command line utility to convert Markdown to HTML",
   "license": "MIT",
   "homepage": "https://github.com/phortuin/downpipe",
   "author": {
