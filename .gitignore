@@ -1,0 +1,2 @@
+node_modules
+.npmrc # contains personal access token to publish to github packages

@@ -1,0 +1,538 @@
+:root {
+	--spacing-default: 1.25rem;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --font-size-reduced: 0.875em;
+    --font-size-default: 1em;
+    --font-size-large: 2em;
+
+    --font-face-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-face-monospace: Menlo, Consolas, monospace;
+    --line-height: 1.5;
+
+    --document-offset-top: 4rem;
+
+    --column-width: 32rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+@media (min-width: 568px) {
+	html {
+		font-size: 125%;
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		font-size: 137.5%;
+	}
+}
+
+@media (min-width: 1024px) {
+	html {
+		font-size: 150%;
+	}
+}
+
+@media (min-width: 1440px) {
+	html {
+		font-size: 162.5%;
+	}
+}
+
+@media (min-width: 1920px) {
+	html {
+		font-size: 200%;
+	}
+}
+
+body {
+    background: var(--color-white);
+    font-family: var(--font-face-base);
+    font-feature-settings: "kern", "liga", "ss01", "ss02", "cv06"; /* ss01=straight 6/9, ss02=open 4, ss07=single storey a, cv06=haakje aan l */
+    -webkit-text-size-adjust: 100%;
+    color: var(--color-black);
+    line-height: var(--line-height);
+    margin: 0 auto;
+    padding: 0 var(--spacing-default);
+    max-width: var(--column-width);
+    letter-spacing: 0.03em;
+    word-break: break-word;
+}
+
+body > *:first-child {
+	padding-top: var(--document-offset-top);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0 0 1.25rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.875em;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    float: left;
+    line-height: 1.2;
+    letter-spacing: 4px;
+    margin: 0 -50% 2.5rem 50%;
+    transform: translateX(-50%);
+    padding: 0.1875em 0.1875em 0.25em 0.25em;
+    text-align: center;
+    font-weight: 700;
+}
+
+h1::after {
+    display: block;
+    content: "";
+    border-bottom: 5px solid black;
+    max-width: 50%;
+    margin: .75rem -50% 0 50%;
+    transform: translateX(-50%);
+}
+
+h1 + * {
+  clear: both;
+}
+
+code {
+    font-family: var(--font-face-monospace);
+    font-size: var(--font-size-reduced);
+    padding: 0 0.3125em;
+    background: #eee;
+    color: black;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 0.125em;
+    color: #d00;
+}
+
+p code {
+    /* white-space: nowrap; */
+}
+
+pre {
+    background: hsla(0,0%,0%,0.875);
+    padding: 0.5em;
+    overflow-y: hidden;
+    margin: 0 0 1.25rem;
+}
+
+pre code {
+    background: none;
+    border: 0;
+    color: white;
+}
+
+b, strong {
+    font-weight: bold;
+    font-size: 0.9375em;
+}
+
+blockquote {
+    position: relative;
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    /*background: rgba(255, 240, 48, 0.3);*/
+    background: #eee;
+    /*background: rgba(255, 240, 48, 0.7);*/
+}
+
+blockquote code {
+    background: white;
+}
+
+
+h2 {
+    float: left;
+    border-bottom: 1px solid black;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9375em;
+    margin: 1.25rem -50% .75rem 50%;
+    transform: translateX(-50%);
+
+}
+
+h2::after,
+h3::after {
+    display: block;
+    content: "";
+    border-top: 1px solid #bbb;
+    border-radius: 50%;
+}
+
+h2 + * {
+  clear: both;
+}
+
+h2 + blockquote {
+    margin-top: 6.25rem; /* quick fix. not ok. dit is omdat h2 float dus je duwt je marge eigenlijk tegen het element boven de h2 aan */
+}
+
+h3 {
+    margin-bottom: 0.5rem;
+    /*text-transform: uppercase;*/
+    /*letter-spacing: 1px;*/
+    border-bottom: 1px solid black;
+    float: left;
+}
+
+h3 + * {
+    clear: both;
+}
+
+/*
+h3::before {
+    display: block;
+    content: "§";
+    margin-left: -1.25rem;
+    float: left;
+}
+*/
+p {
+    margin: 0 0 1.25rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+figure {
+    display: block;
+    margin: 0 0 1.25rem;
+}
+
+figcaption {
+    padding: 1.25rem;
+    background: #eee;
+    /*font-size: 0.875em;*/
+    /*font-style: italic;*/
+}
+
+/*figcaption::after {
+    display: block;
+    content: "";
+    background: transparent linear-gradient(to top, black 0, transparent 1.8px);
+    height: 2px;
+    margin-top: 0.5em;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+*/
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 0.125em;
+}
+
+a {
+    padding: 0 0.0625em;
+    background: transparent linear-gradient(to bottom, transparent 93%, black 97%, black 100%);
+    text-shadow: 1px 1px 0 white, -1px 1px 0 white, 2px 0 0 white, -2px 0 0 white;
+    text-decoration: none;
+    color: black;
+}
+
+a:not(:empty)[href^=http]:after {
+    content: " ↗"
+}
+
+a[href^="#"] {
+    padding: 0 0.375em;
+    background: rgba(255, 240, 48, 0.7);
+    text-shadow: none;
+    color: black;
+}
+
+a[href^="mailto"],
+a[href^="tel"] {
+
+}
+
+a.silent {
+    background: none;
+    text-shadow: none;
+    color: black;
+}
+
+a.icon {
+    text-transform: lowercase;
+}
+
+a.icon::after {
+    content: "_";
+    animation: pulse 1s steps(2, start) infinite;
+}
+
+@keyframes pulse {
+  to { visibility: hidden; }
+}
+
+sub,
+sup {
+    font-size: 0.75em;
+    line-height: 1;
+    vertical-align: 0;
+}
+
+sub {
+    vertical-align: bottom;
+}
+
+sup {
+    vertical-align: top;
+}
+
+del {
+    opacity: 0.3;
+    text-shadow: 1px 1px 0 white, -1px 1px 0 white, 2px 0 0 white, -2px 0 0 white;
+}
+
+del code {
+    text-decoration: line-through;
+    text-shadow: 1px 1px 0 black, -1px 1px 0 black, 2px 0 0 black, -2px 0 0 black;
+}
+
+hr {
+    border: 0;
+    background: transparent linear-gradient(to top, black 0, transparent 1.8px);
+    height: 2px;
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+ul {
+    margin: 0 0 1.25rem;
+    padding: 0 0 0 1.25rem;
+}
+
+li {
+    list-style: none;
+}
+
+li::before {
+    display: inline-block;
+    content: "•";
+    content: "-";
+    content: "*";
+    content: "–";
+    width: 1.25rem;
+    margin-left: -1.25rem;
+    /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);*/
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 0.75em;
+    margin-bottom: 1.25rem;
+    width: 100%;
+}
+
+thead tr {
+    background: transparent linear-gradient(to top, black 0, transparent 1.8px, transparent 3px, black 3px, transparent 4.8px);
+}
+
+th,
+td {
+    font-feature-settings: "tnum";
+    padding: 0.375rem 0.5rem;
+    vertical-align: top;
+}
+
+th {
+    padding-bottom: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9375em;
+    text-align: left;
+}
+
+tbody tr:first-child td {
+    padding-top: 0.375rem;
+}
+
+tr:first-child td {
+    border-top: none;
+}
+
+tr {
+    background: transparent linear-gradient(to bottom, black 0, transparent 1.8px);
+}
+
+tbody tr:first-child {
+    background: none;
+}
+
+td:first-child,
+th:first-child {
+    padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+    padding-right: 0;
+}
+
+.task-list-item {
+    list-style: none;
+    margin-left: -1.25rem;
+}
+
+.task-list-item--checked {
+    text-decoration: line-through;
+    text-shadow: 1px 1px 0 white, -1px 1px 0 white, 2px 0 0 white, -2px 0 0 white;
+}
+
+.task-list-item-checkbox {
+    overflow: hidden;
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.task-list-item::before {
+    display: inline-block;
+    content: "☐";
+    /*border: 1px solid black;*/
+    /*box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);*/
+    /*line-height: 0.6;*/
+    width: 0.6875rem;
+    height: 0.6875rem;
+    /*margin-right: 0.75rem;*/
+    /*margin-left: -1.5rem;*/
+}
+
+.task-list-item--checked::before {
+    /*font-size: 1.125em;*/
+    /*line-height: 0.5;*/
+    /*letter-spacing: -3px;*/
+    content: "☑";
+}
+
+/** Prism */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #736f70; /** gray */
+}
+
+.token.punctuation {
+    color: #e3dfe0; /** off white */
+}
+
+.namespace {
+    color: #e74d3b; /** red */
+}
+
+.token.property {
+    color: #00aeef; /** cyan */
+}
+
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #a1d820; /** green */
+}
+
+.token.boolean,
+.token.number {
+    color: #e74d3b; /** red */
+}
+
+.token.tag {
+    color: #e74d3b; /** red */
+}
+
+.token.selector {
+    color: #a1d820; /** green */
+}
+
+.token.attr-name {
+    color: #a1d820; /** green */
+}
+
+.token.string {
+    color: #f1c40e; /** yellow */
+}
+
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #00aeef; /** cyan */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #f1c40e; /** yellow */
+}
+
+.token.atrule,
+.token.attr-value {
+    color: #f1c40e; /** yellow */
+}
+
+.token.function {
+    color: #a1d820; /** green */
+}
+
+.token.keyword {
+    color: #00aeef; /** cyan */
+}
+
+.token.regex {
+    color: #e74d3b; /** red */
+}
+
+.token.important {
+    color: #e74d3b; /** cyan */
+}
+
+.token.regex {
+    font-style: italic;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
