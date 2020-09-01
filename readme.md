@@ -11,3 +11,8 @@ $ downpipe < readme.md > index.html
 ```
 
 Uses [Unified](https://github.com/unifiedjs/unified) & [Rehype](https://github.com/rehypejs/rehype) plus several plugins.
+
+## To do
+
+- [ ] Write tests for `h1-to-title` transform plugin
+- [ ] Make said transform into its own plugin
