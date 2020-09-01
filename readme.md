@@ -10,4 +10,4 @@ Usage:
 $ downpipe < readme.md > index.html
 ```
 
-Uses Unified & Rehype plus several plugins.
+Uses [Unified](https://github.com/unifiedjs/unified) & [Rehype](https://github.com/rehypejs/rehype) plus several plugins.
