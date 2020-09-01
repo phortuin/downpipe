@@ -15,7 +15,6 @@ const processor = unified()
 	.use(remark2rehype)
 	.use(prism)
 	.use(doc, {
-		title: 'Readme', // file name?
 		css: 'index.css',
 	})
 	.use(inline)
