@@ -1,6 +1,6 @@
 {
   "name": "@phortuin/downpipe",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Command line utility to convert Markdown to HTML",
   "license": "MIT",
   "homepage": "https://github.com/phortuin/downpipe",
